@@ -107,7 +107,7 @@ class TimeSeriesWorker(Resource):
             except dateutil.parser._parser.ParserError:
                 return {"message": "wrong data format"}, 422
 
-            return {"id": str(post_id.inserted_id)}
+            return {"id": str(post_id.inserted_id)}, 200
 
         else:
             return '', 422
